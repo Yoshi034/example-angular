@@ -1,0 +1,29 @@
+<div class="m-block-app">
+<a href="javascript:void(0);" (click)="click1()" [ngStyle]="styles1" class="m-btn-grad">
+    <span class="e-inr">リンク1</span>
+</a>
+</div>
+<br>
+リンク1クリック回数：{{clickCount1}}
+
+<br>
+<div class="m-block-app">
+    <a href="javascript:void(0);" (click)="click2()" [ngStyle]="styles2" class="m-btn-grad">
+        <span class="e-inr"><span>リンク2</span></span>
+    </a>
+</div>
+<br>
+リンク2クリック回数：{{clickCount2}}
+
+<br>
+<div class="m-block-app">
+    <a href="javascript:void(0);" (click)="click3()" [ngStyle]="styles3" class="m-btn-grad">
+        <span>リンク3</span>
+    </a>
+</div>
+<br>
+リンク3クリック回数：{{clickCount3}}
+
+
+<br>
+<button (click)="reset()">リセット</button>
