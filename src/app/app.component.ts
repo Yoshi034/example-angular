@@ -1,15 +1,14 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private http: HttpClient, private router: Router, private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(private changeDetectorRef: ChangeDetectorRef) { }
   clickCount1: number = 0;
   /** リンク活性化フラグ */
   disabledAnchor1: boolean = false;
@@ -18,7 +17,7 @@ export class AppComponent {
       'pointer-events': this.disabledAnchor1 ? 'none' : 'auto'
     };
   }
-  
+
   clickCount2: number = 0;
   /** リンク活性化フラグ */
   disabledAnchor2: boolean = false;
@@ -27,7 +26,7 @@ export class AppComponent {
       'pointer-events': this.disabledAnchor2 ? 'none' : 'auto'
     };
   }
-  
+
   clickCount3: number = 0;
   /** リンク活性化フラグ */
   disabledAnchor3: boolean = false;
@@ -36,7 +35,7 @@ export class AppComponent {
       'pointer-events': this.disabledAnchor3 ? 'none' : 'auto'
     };
   }
-  
+
   click1() {
     // 二重サブミット制御設定
     this.disabledAnchor1 = true;
